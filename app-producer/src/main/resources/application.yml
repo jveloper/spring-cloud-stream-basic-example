@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    function:
+      definition: producer
+    stream:
+      kafka:
+        binder:
+          brokers: <kafka_ip>:<kafka_port>
+          replication-factor: 1
+      bindings:
+        producer-out-0:
+          destination: patient-topic

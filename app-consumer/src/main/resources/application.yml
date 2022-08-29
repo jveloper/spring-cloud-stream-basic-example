@@ -1,0 +1,15 @@
+
+spring:
+  cloud:
+    function:
+      definition: consumer
+    stream:
+      kafka:
+        binder:
+          brokers: <kafka_ip>:<kafka_port>
+          replication-factor: 1
+      bindings:
+        consumer-in-0:
+          destination: patient-topic
+server:
+  port: 8081
